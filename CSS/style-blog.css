@@ -1,0 +1,201 @@
+*, :after, :before{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #fafaf9;
+    font-family: 'UnistraA-Regular','Courier New', Courier, monospace;
+}
+.header{
+    padding: 1em;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    overflow: hidden;
+    z-index: 1;
+}
+.el{
+    margin: 0 10px;
+}
+.header a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    font-size: 1.5em;
+    margin: 10px;
+}
+.uni, .stra, .void {
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+.stra{
+    font-family: 'UnistraB-Bold';
+}
+svg{
+    color: rgb(121, 42, 29);
+    width: 50px;
+    height: auto;
+}
+.coffee{
+    font-family: 'UnistraB-Bold';
+    font-size: 2rem;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0);
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+button{
+    height: 2rem;
+    width: 80px;
+    border: solid 1px #999999;
+    color: #999999;
+    border-radius: 15px;
+    position: relative;
+    top: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    border: solid 1px rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
+    background-color: #fafaf9;
+}
+.arrow:hover{
+    text-decoration: underline;
+}
+.arrow:after{
+    content: '\00279C';
+}
+.title{
+    font-family: 'UnistraB-Bold';
+}
+
+@media (min-width: 800px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .bande{
+        height: 300px;
+        background-image: url("../assets/library.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .bande span{
+        color: blanchedalmond;
+        font-family: 'UnistraB-Bold';
+        position: relative;
+        top: 180px;
+        left: 50px;
+        font-size: 4em;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 10px 70px 10px;
+        width: 30vw;
+        border: solid 1px #d1d1d1;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .card img{
+        width: 27vw;
+    }
+    
+    .footer{
+        padding: 30px 0 30px;
+        margin-top: 20px;
+        text-align: center;
+        background-color: #fff;
+    }
+    .both{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 800px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static; 
+    }
+    .bande{
+        height: 100px;
+        background-image: url("../assets/library.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .bande span{
+        color: blanchedalmond;
+        font-family: 'UnistraB-Bold';
+        position: relative;
+        top: 20px;
+        left: 40vw;
+        font-size: 4em;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 10px 70px 10px;
+        width: 85vw;
+        border: solid 1px #d1d1d1;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    
+    .card img{
+        width: 100%;
+    }
+
+    .footer{
+        padding: 30px 0 30px;
+        margin-top: 20px;
+        text-align: center;
+        background-color: #fff;
+    }
+    .both{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@font-face {
+    font-family: "UnistraA-Regular";
+    src: url("../font/UnistraA-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Bold";
+    src: url("../font/UnistraB-Bold.ttf") format("truetype");
+}
